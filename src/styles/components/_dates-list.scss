@@ -1,0 +1,242 @@
+.dates-list-modal {
+   color: #172b4d;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+   font-size: 14px;
+   line-height: 20px;
+   font-weight: 400;
+   .no-back {
+      .pop-over-header {
+         .pop-over-header-close-btn {
+            @include pop-over-close-btn;
+            right: 0;
+         }
+      }
+      .pop-over-content {
+         width: fit-content;
+         margin-block: 10px;
+         margin-left: 15px;
+         .pop-over-section {
+         }
+         .checkboxes-dates {
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .start-date-checkbox,
+            .due-date-checkbox {
+               margin-bottom: 12px;
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               height: 32px;
+               .btn-start-date,
+               .btn-due-date {
+                  height: 32px;
+                  margin-right: 10px;
+                  width: 90px;
+                  color: #172b4d;
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                  font-size: 14px;
+                  line-height: 20px;
+                  font-weight: 400;
+                  box-sizing: border-box;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 3px;
+                  cursor: pointer;
+                  padding: 6px 12px;
+                  text-decoration: none;
+                  background-color: rgba(9, 30, 66, 0.04);
+                  box-shadow: none;
+                  // border: none;
+                  border: 1px solid #909399;
+                  &:active {
+                     background-color: #0079bf;
+                     box-shadow: none;
+                     border: 1px solid #909399;
+                     color: #ffffff;
+                  }
+                  &:hover {
+                     background-color: #026aa7;
+                     box-shadow: none;
+                     border: none;
+                     color: #ffffff;
+                  }
+               }
+               .start-date-section,
+               .due-date-section {
+                  display: flex;
+                  flex-wrap: wrap;
+                  max-width: 100%;
+
+                  .label-cb-start-wrapper {
+                     margin: 0;
+                     padding: 0;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                     max-width: 100%;
+                     margin-top: 0;
+                     overflow: hidden;
+                     text-overflow: ellipsis;
+                     white-space: nowrap;
+                     max-width: 100%;
+
+                     .checkbox-start-date {
+                        width: 90px;
+                        margin: 0;
+                        -webkit-appearance: checkbox;
+                        display: inline;
+                        height: 1px;
+                        clip: rect(1px, 1px, 1px, 1px);
+                        overflow: hidden;
+                        pointer-events: none;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                     }
+
+                     .checkbox-box-span-wrapper {
+                        position: relative;
+                        flex-shrink: 0;
+                        border-radius: 2px;
+                        height: 16px;
+                        width: 16px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        transition: all 0.2s ease-in-out;
+                        background-color: #fafbfc;
+                        box-shadow: inset 0 0 0 2px #dfe1e6;
+                        &.checked {
+                           background-color: #0079bf;
+                           box-shadow: inset 0 0 0 2px #0079bf;
+                        }
+
+                        .checkbox-svg-wrapper {
+                           position: absolute;
+                           top: 0;
+                           left: 0;
+                           height: 16px;
+                           width: 16px;
+                           opacity: 0;
+                           margin-right: 8px;
+                           &.checked {
+                              opacity: 1;
+                           }
+                        }
+                        svg {
+                           fill: transparent;
+                           &.checked {
+                              fill: white;
+                           }
+                        }
+                     }
+                  }
+
+                  .start-date-box {
+                     margin-right: 8px;
+
+                     .input-start-date {
+                        background-color: #ebecf0;
+                        box-shadow: none;
+                        color: #a5adba;
+                        cursor: text;
+                        user-select: none;
+                        width: 100px;
+                        margin: 0;
+                        padding: 6px;
+                        outline: none;
+                        border: none;
+                        box-sizing: border-box;
+                        color: #172b4d;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-weight: 400;
+                        transition-property: background-color, border-color, box-shadow;
+                        transition-duration: 85ms;
+                        transition-timing-function: ease;
+                        border-radius: 3px;
+                        &.checked {
+                           background-color: #ffffff;
+                           box-shadow: inset 0 0 0 2px #0079bf;
+                        }
+                     }
+                  }
+               }
+            }
+
+            .total-dates {
+               color: #172b4d;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+               font-size: 14px;
+               line-height: 24px;
+               font-weight: 500;
+               box-sizing: border-box;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 3px;
+               padding: 6px 12px;
+               text-decoration: none;
+               background-color: rgba(9, 30, 66, 0.04);
+               box-shadow: none;
+               border: none;
+               transition-property: background-color, border-color, box-shadow;
+               transition-duration: 85ms;
+               transition-timing-function: ease;
+            }
+
+            .btns-action {
+               display: flex;
+               flex-direction: row;
+               align-items: center;
+               justify-content: center;
+               width: 100%;
+               gap: 10px;
+               margin-top: 10px;
+               button {
+                  height: 32px;
+                  flex: 1;
+                  color: #172b4d;
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+                  font-size: 14px;
+                  line-height: 20px;
+                  font-weight: 400;
+                  box-sizing: border-box;
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 3px;
+                  cursor: pointer;
+                  padding: 6px 12px;
+                  text-decoration: none;
+                  box-shadow: none;
+                  border: none;
+               }
+               .btn-save {
+                  background-color: #0079bf;
+                  box-shadow: none;
+                  border: none;
+                  color: #ffffff;
+                  &:hover {
+                     background-color: #026aa7;
+                     box-shadow: none;
+                     border: none;
+                     color: #ffffff;
+                  }
+               }
+               .btn-remove {
+                  background-color: rgba(9, 30, 66, 0.04);
+                  &:hover {
+                     background-color: #f0f0f0;
+                     box-shadow: none;
+                     border: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

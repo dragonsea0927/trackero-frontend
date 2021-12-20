@@ -1,0 +1,80 @@
+.task-detail-checklist{
+    .checklist{
+        margin-bottom: 24px;
+        .checklist-icon{
+            left: -40px;
+            position: absolute;
+            top: 8px;
+            &::before{
+                content: "\e91a";
+            }
+        }
+        .checklist-title{
+            align-items: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            .delete-btn{
+                 background-color: #091e420a;
+            }
+            h3{
+                margin: 6px 0;
+            }
+        }
+        .checklist-progress{
+            margin-bottom: 6px;
+            position: relative;
+            .checklist-progress-percentage{
+                color: #5e6c84;
+                font-size: 11px;
+                left: 0;
+                line-height: 10px;
+                position: absolute;
+                text-align: center;
+                top: -1px;
+                width: 32px;
+            }
+            .checklist-progress-bar{
+                background: #091e4214;
+                border-radius: 4px;
+                clear: both;
+                height: 8px;
+                margin: 0 0 0 40px;
+                overflow: hidden;
+                position: relative;
+                .checklist-progress-bar-current {
+                    background: #5ba4cf;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transition-duration: .14s;
+                    transition-property: width,background;
+                    transition-timing-function: ease-in;
+                }
+            }
+        }
+        .checklist-items-list {
+            min-height: 8px;
+        }
+        .checklist-new-item{
+            margin-left: 40px;
+            .checklist-add-controls{
+                margin-top: 8px;
+                display: flex;
+                flex-direction: row;
+                .nch-button-primary{
+                    margin: 0 4px 0 0;
+                }
+                .icon-close{
+                    &::before{
+                        content: "\e91c";
+                    }
+                }
+            }
+            .item-button{
+                margin-top: 12px;
+            }
+        }
+    }
+}

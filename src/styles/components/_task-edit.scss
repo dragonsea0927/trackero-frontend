@@ -1,0 +1,266 @@
+.quick-card-editor {
+   background: #0009;
+   bottom: 0;
+   color: #fff;
+   left: 0;
+   position: fixed;
+   right: 0;
+   top: 0;
+   z-index: 10;
+
+   .quick-card-editor-close-icon {
+      color: #fff9;
+      padding: 9px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition-duration: 0.15s;
+      transition-property: transform, color;
+      width: 50px;
+      height: 50px;
+
+      &::before {
+         content: '\e91c';
+      }
+
+      &:hover {
+         color: #fff;
+         cursor: pointer;
+         transform: scale(1.2);
+      }
+   }
+
+   .quick-card-editor-card {
+      position: absolute;
+
+      .list-card-quick-edit {
+         z-index: 1;
+      }
+
+      .list-card {
+         background-color: #fff;
+         border-radius: 3px;
+         box-shadow: 0 1px 0 #091e4240;
+         // cursor: pointer;
+         display: block;
+         margin-bottom: 8px;
+         max-width: 300px;
+         min-height: 20px;
+         position: relative;
+         text-decoration: none;
+         // z-index: 0;
+
+         .list-card-cover {
+            border-radius: 3px 3px 0 0;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            user-select: none;
+         }
+
+         .list-card-details {
+            overflow: hidden;
+            padding: 6px 8px 2px;
+            position: relative;
+            z-index: 10;
+
+            .list-card-labels {
+               z-index: 0;
+               overflow: auto;
+               position: relative;
+
+               .card-label {
+                  border-radius: 4px;
+                  color: #fff;
+                  display: block;
+                  margin-right: 4px;
+                  max-width: 100%;
+                  overflow: hidden;
+                  padding: 4px 6px;
+                  position: relative;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  /**/
+                  height: 16px;
+                  line-height: 16px;
+                  max-width: 198px;
+                  padding: 0 8px;
+                  /**/
+                  float: left;
+                  font-size: 12px;
+                  font-weight: 700;
+                  // height: 8px;
+                  // line-height: 100px;
+                  margin: 0 4px 4px 0;
+                  // max-width: 40px;
+                  min-width: 40px;
+                  // padding: 0;
+                  text-shadow: none;
+                  width: auto;
+
+                  .label-text {
+                     display: initial;
+                     line-height: 16px;
+                  }
+               }
+            }
+
+            .list-card-edit-title {
+               width: 100%;
+               overflow-wrap: break-word;
+               color: #172b4d;
+               border-radius: 3px;
+               box-shadow: inset 0 0 0 2px #dfe1e6;
+               text-decoration: none;
+               font-family: unset;
+               line-height: 20px;
+               margin-bottom: 4px;
+               max-height: 162px;
+               min-height: 54px;
+               padding: 0;
+               text-align: start;
+               display: flex;
+               align-items: flex-start;
+               background: none;
+               border: none;
+               box-shadow: none;
+               height: auto;
+               outline: 0 none;
+               cursor: text;
+               font-size: 14px;
+               resize: none;
+               font-weight: 400;
+            }
+
+            .badges {
+               float: left;
+               margin-left: -2px;
+               max-width: 100%;
+               height: fit-content;
+
+               .js-badges {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  flex-wrap: wrap;
+               }
+            }
+         }
+      }
+
+      .nch-button-primary.wide {
+         padding-inline: 24px;
+         margin: 8px 4px 0 0;
+         color: #fff;
+      }
+
+      .quick-card-editor-buttons {
+         left: 100%;
+         opacity: 0;
+         position: absolute;
+         top: 0;
+         transform: translateX(-20px);
+         transition: opacity 85ms ease-in, transform 85ms ease-in;
+         width: 240px;
+         z-index: 0;
+
+         &.fade-in {
+            opacity: 1;
+            transform: translateX(0);
+         }
+
+         .quick-card-editor-buttons-item {
+            background: #0009;
+            border-radius: 3px;
+            clear: both;
+            color: #e6e6e6;
+            display: block;
+            float: left;
+            margin: 0 0 4px 8px;
+            padding: 6px 12px 6px 8px;
+            text-decoration: none;
+            transition: transform 85ms ease-in;
+
+            &:hover {
+               background: #000c;
+               color: #fff;
+               transform: translateX(5px);
+            }
+
+            .icon-card {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e912';
+               }
+            }
+
+            .icon-label {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e93f';
+               }
+            }
+
+            .icon-member {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e946';
+               }
+            }
+
+            .icon-card-cover {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e914';
+               }
+            }
+
+            .icon-move {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e94a';
+               }
+            }
+
+            .icon-clock {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e91b';
+               }
+            }
+
+            .icon-archive {
+               color: #fff;
+               text-decoration: none;
+               position: relative;
+               vertical-align: middle;
+               &::before {
+                  content: '\e907';
+               }
+            }
+
+            .quick-card-editor-buttons-item-text {
+               margin-left: 4px;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,38 @@
+.mod-mini-profile{
+    position: fixed;
+        .no-back{
+            .pop-over-header{
+                border-bottom-color: #0000;
+                height: 30px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 60px;
+                z-index: 1;
+                .pop-over-header-title {
+                    // display: none;
+                }
+                .pop-over-header-close-btn{
+                    right: 20px;
+                }
+            }
+            .pop-over-content{
+                .mini-profile{
+                    margin: 8px 0;
+                    min-height: 56px;
+                    position: relative;
+                    .mini-profile-member{
+                        float: left;
+                        margin: 2px;
+                    }
+                    .mini-profile-info{
+                        word-wrap: break-word;
+                        margin: 0 0 0 64px;
+                        .mini-profile-info-title{
+                            margin: 0 40px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+}

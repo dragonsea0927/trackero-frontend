@@ -1,0 +1,175 @@
+@mixin flex-row-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex-column-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+// custom scroll-bar
+@mixin board-custom-scroll-bar {
+   &::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      display: block;
+      border-radius: 3px;
+      background: #ffffff80;
+   }
+   &::-webkit-scrollbar-button {
+      width: 24px;
+   }
+
+   &::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background: #00000026;
+      margin: 0 20px;
+   }
+}
+
+@mixin group-custom-scroll-bar {
+   &::-webkit-scrollbar {
+      width: 8px;
+   }
+   &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: #00000026;
+      display: block;
+   }
+   &::-webkit-scrollbar-track-piece {
+      border-radius: 3px;
+      background: #091e4214;
+   }
+}
+
+@mixin nav-btn-hover {
+   background-color: rgba(255, 255, 255, 0.2);
+   box-shadow: none;
+   color: #fff;
+   cursor: pointer;
+}
+
+@mixin board-nav-btn-hover {
+   background-color: rgba(255, 255, 255, 0.3);
+   color: #fff;
+   box-shadow: none;
+   border: none;
+   cursor: pointer;
+}
+
+@mixin nav-input-hover {
+   background-color: rgba(255, 255, 255, 0.4);
+   box-shadow: none;
+   border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+@mixin button-add-primary {
+   background-color: #0079bf;
+   border: none;
+   box-shadow: none;
+   color: #fff;
+   cursor: pointer;
+   width: 80px;
+   height: 32px;
+   align-items: center;
+   border-radius: 3px;
+
+   &:hover {
+      background-color: #026aa7;
+      border: none;
+      box-shadow: none;
+      color: #fff;
+   }
+}
+
+@mixin icon-xlg {
+   color: #6b778c;
+   height: 32px;
+   width: 32px;
+   display: inline-block;
+   text-align: center;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-left: 6px;
+   cursor: pointer;
+}
+
+@mixin icon-lg {
+   color: #6b778c;
+   height: 24px;
+   width: 24px;
+   display: inline-block;
+   text-align: center;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-left: 6px;
+   cursor: pointer;
+}
+
+@mixin icon-sm {
+   color: #6b778c;
+   margin-left: 2px;
+   margin-right: 4px;
+   height: 16px;
+   line-height: 15px;
+   width: 16px;
+   display: inline-block;
+   cursor: pointer;
+}
+
+@mixin board-nav-btns {
+   border-radius: 3px;
+   color: #fff;
+}
+
+@mixin pop-over-close-btn {
+   color: #6b778c;
+   position: absolute;
+   right: 20px;
+   top: 0;
+}
+
+@mixin pop-over-search-input {
+   margin: 4px 0 12px;
+   width: 100%;
+   background-color: #fafbfc;
+   border: none;
+   border-radius: 3px;
+   box-shadow: inset 0 0 0 2px #dfe1e6;
+   box-sizing: border-box;
+   display: block;
+   line-height: 20px;
+   margin-bottom: 12px;
+   outline: none;
+   padding: 8px 12px;
+   transition-duration: 85ms;
+   transition-property: background-color, border-color, box-shadow;
+   transition-timing-function: ease;
+   &:hover {
+      background-color: #ebecf0;
+      box-shadow: inset 0 0 0 2px #dfe1e6;
+   }
+   &:focus {
+      background-color: #fff;
+      box-shadow: inset 0 0 0 2px #0079bf;
+   }
+}
+
+@mixin label-hovering($color) {
+   box-shadow: -8px 0 $color;
+}
+
+@mixin pop-over-list-title {
+   color: #484c52;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 16px;
+   margin-top: 16px;
+}

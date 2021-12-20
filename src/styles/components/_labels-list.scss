@@ -1,0 +1,68 @@
+.labels-list-modal{
+    .pop-over-header-close-btn{
+        @include pop-over-close-btn;
+        right: 5px;
+    }
+    .pop-over-content{
+        .search-labels{
+            @include pop-over-search-input;
+        }
+        .pop-over-section{
+            margin-top: 12px;
+            h4{
+                @include pop-over-list-title;
+            }
+            .pop-over-labels-list{
+                margin-bottom: 8px;
+                .label-item{
+                    padding-right: 36px;
+                    position: relative;
+                    .icon-edit{
+                        border-radius: 3px;
+                        padding: 6px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 32px;
+                        width: 32px;
+                        &::before{
+                            content: "\e928"; 
+                        }
+                        &:hover{
+                            background-color: #091e4214;
+                        }
+                        &:active{
+                            background-color: #091e4221;
+                        }
+                    }
+                    .pop-over-label{
+                        border-radius: 3px;
+                        font-weight: 700;
+                        margin: 0 0 4px;
+                        min-height: 20px;
+                        padding: 6px 12px;
+                        transition: padding 85ms,margin 85ms,box-shadow 85ms;
+                        &.label-hover{
+                            cursor: pointer;
+                            margin-left: 4px;
+                        }
+                        .checked-icon{
+                            display: none;
+                            position: absolute;
+                            right: 6px;
+                            top: 6px;
+                            &::before{
+                                content: "\e916";
+                            }
+                            &.icon-check{
+                                color: #fff;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

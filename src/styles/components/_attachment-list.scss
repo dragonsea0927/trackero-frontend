@@ -1,0 +1,128 @@
+.attachments-list-modal {
+   .no-back {
+      .pop-over-header {
+         .pop-over-header-close-btn {
+            @include pop-over-close-btn;
+            right: 0;
+         }
+      }
+      .pop-over-content {
+         overflow-y: auto;
+         padding: 0 12px 12px;
+         .pop-over-section {
+            // .search-attachments {
+            //    @include pop-over-search-input;
+            // }
+            .attach-from {
+               margin-bottom: 8px;
+               border-bottom: 1px solid rgba(9, 30, 66, 0.1);
+               color: #5e6c84;
+               padding-bottom: 8px;
+               position: relative;
+
+               // .choose-file {
+               //    display: inline-block;
+               //    // width: 100%;
+               //    padding: 120px 0 0 0;
+               //    height: 100px;
+               //    overflow: hidden;
+               //    -webkit-box-sizing: border-box;
+               //    -moz-box-sizing: border-box;
+               //    box-sizing: border-box;
+               //    // border-radius: 20px;
+               //    // background-size: 60px 60px;
+               // }
+               ::-webkit-file-upload-button {
+                  display: none;
+               }
+               .choose-file {
+                  opacity: 0;
+                  cursor: pointer;
+               }
+
+               label {
+                  display: inline-block;
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+                  padding: 4px 0;
+                  &:hover {
+                     background-color: #eaecf0;
+                  }
+                  // &::after,
+                  // &::before {
+                  //    content: '';
+                  //    position: absolute;
+                  //    left: 0;
+                  //    top: 0;
+                  //    width: 200px;
+                  //    padding: 20px 0;
+                  //    overflow: hidden;
+                  // }
+               }
+            }
+            .attach-link {
+               padding-bottom: 8px;
+               margin-bottom: 8px;
+               border-bottom: 1px solid rgba(9, 30, 66, 0.1);
+               color: #5e6c84;
+
+               .label {
+                  color: #5e6c84;
+                  display: block;
+                  font-size: 14px;
+                  font-weight: 700;
+                  line-height: 16px;
+                  margin-bottom: 4px;
+                  margin-top: 12px;
+               }
+
+               .search-input,
+               .name-input {
+                  box-shadow: inset 0 0 0 2px #dfe1e6;
+                  margin: 4px 0 12px;
+                  background-color: #fafbfc;
+                  border: none;
+                  border-radius: 3px;
+                  display: block;
+                  line-height: 20px;
+                  outline: none;
+                  padding: 8px 12px;
+                  transition-duration: 85ms;
+                  transition-property: background-color, border-color, box-shadow;
+                  transition-timing-function: ease;
+                  width: 100%;
+                  font-family: unset;
+                  font-size: 14px;
+                  color: unset;
+                  &:hover {
+                     background-color: #ebecf0;
+                  }
+               }
+
+               .card-edit-btn {
+                  cursor: pointer;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  border: none;
+                  border-radius: 3px;
+                  color: #172b4d;
+                  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+                  font-size: 14px;
+                  line-height: 20px;
+                  padding: 6px 12px;
+                  transition: background-color, border-color, box-shadow 85ms ease;
+                  background-color: rgba(9, 30, 66, 0.04);
+                  &:hover {
+                     background-color: #091e4214;
+                     border: none;
+                     box-shadow: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

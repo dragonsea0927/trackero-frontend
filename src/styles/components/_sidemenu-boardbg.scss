@@ -1,0 +1,29 @@
+.board-background-section-tiles{
+    overflow-y: hidden;
+    .board-background-section-tile{
+        cursor: pointer;
+        box-sizing: border-box;
+        cursor: pointer;
+        float: left;
+        padding: 0 4px;
+        position: relative;
+        text-align: center;
+        width: 50%;
+        .image{
+            background-color: #dfe1e6;
+            background-size: cover;
+            border-radius: 8px;
+            height: 96px;
+            margin-bottom: 8px;
+            width: 100%;
+            &:hover{
+                opacity: .7;
+            }
+        }
+        .title{
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+    }
+}

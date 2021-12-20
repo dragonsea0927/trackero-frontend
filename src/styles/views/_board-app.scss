@@ -1,0 +1,151 @@
+.board-app {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   flex-grow: 1;
+   overflow-y: auto;
+
+   outline: none;
+
+   .board-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex: 1 1 0%;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      .board-container {
+         display: flex;
+         flex-direction: column;
+         flex: 1 1 0%;
+         overflow-y: auto;
+
+         .board-content {
+            outline: none;
+            flex-grow: 1;
+            overflow-y: auto;
+            position: relative;
+
+            .board-content-wrapper {
+               position: absolute;
+               top: 0;
+               bottom: 0;
+               left: 0;
+               right: 0;
+
+               .board-main-content {
+                  display: flex;
+                  flex-direction: column;
+                  height: 100%;
+                  margin-right: 0;
+                  position: relative;
+
+                  .groups-container-main {
+                     flex-grow: 1;
+                     position: relative;
+                     
+                     // background: linear-gradient(180deg,#0000003d 0,#0000003d 5px,#0000 45px,#0000); // Only on image backgrounds
+            
+                     .groups-container {
+                        @include board-custom-scroll-bar;
+                        bottom: 0;
+                        left: 0;
+                        margin-bottom: 8px;
+                        overflow-x: auto;
+                        overflow-y: hidden;
+                        padding-bottom: 8px;
+                        padding-left: 12px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        user-select: none;
+                        white-space: nowrap;
+            
+                        .add-list-section {
+                           cursor: pointer;
+                           margin-left: 4px;
+                           border-radius: 3px;
+                           height: 40px;
+                           margin-right: 8px;
+            
+                           .add-list-button {
+                              .list-composer {
+                                 color: #172b4d;
+                                 padding: 6px 8px;
+                                 transition: color 85ms ease-in;
+                                 cursor: pointer;
+                                 white-space: nowrap;
+                                 background-color: #ffffff3d;
+                                 width: 264px;
+                                 height: 40px;
+                                 border: none;
+                                 display: flex;
+                                 align-items: center;
+                                 border-radius: 3px;
+                                 transition: background 85ms ease-in, opacity 40ms ease-in, border-color 85ms ease-in;
+                                 .add-task-plus-icon {
+                                    @include icon-sm;
+                                 }
+            
+                                 &:hover {
+                                    background-color: #ffffff52;
+                                 }
+                              }
+                           }
+            
+                           .list-composer-open {
+                              display: flex;
+                              flex-direction: column;
+                              width: 272px;
+                              height: 80px;
+                              background-color: #ebecf0;
+                              border-radius: 3px;
+            
+                              .add-list-title-input-section {
+                                 .add-list-title-input {
+                                    background-color: #fff;
+                                    display: block;
+                                    transition: margin 85ms ease-in, background 85ms ease-in;
+                                    width: 264px;
+                                    height: 36px;
+                                    border: 2px solid #0079bf;
+                                    cursor: text;
+                                    text-decoration: none;
+                                    font-family: unset;
+                                    overflow: hidden;
+                                    overflow-wrap: break-word;
+                                    resize: none;
+                                    color: #172b4d;
+                                    padding: 8px 12px;
+                                    border-radius: 3px;
+                                    margin: 4px 4px;
+            
+                                    &:focus {
+                                       background-color: white;
+                                       border: 2px solid #0079bf;
+                                       outline: 0 none;
+                                       cursor: text;
+                                    }
+                                 }
+                              }
+                              .add-list-control-section {
+                                 margin: 0 6px;
+            
+                                 .add-list-confirm-btn {
+                                    @include button-add-primary;
+                                 }
+                                 .cancel-add-list {
+                                    @include icon-lg;
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

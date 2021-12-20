@@ -1,0 +1,241 @@
+.board-group,
+.add-list-section {
+   display: inline-block;
+   height: 100%;
+   margin: 0 4px;
+   vertical-align: top;
+   white-space: nowrap;
+   width: 272px;
+
+   .group-preview-container {
+      background-color: #ebecf0;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      max-height: 100%;
+      position: relative;
+      white-space: normal;
+
+      &:hover {
+         cursor: pointer;
+      }
+
+      .group-header-section {
+         flex: 0 0 auto;
+         min-height: 20px;
+         padding: 10px 8px;
+         padding-right: 36px;
+         position: relative;
+
+         .group-header-target {
+            position: absolute;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            right: 0;
+            top: 0;
+         }
+
+         .group-header-title-assist {
+            margin: 0 0 8px;
+            font-family: unset;
+            font-size: 14px;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            height: 28px;
+            background: #0000;
+            font-weight: 600;
+            margin: -4px 0;
+            max-height: 256px;
+            min-height: 20px;
+            padding: 4px 8px;
+            width: 100%;
+            border: none;
+            display: block;
+            outline: none;
+            line-height: 20px;
+         }
+
+         .group-header-title-textarea {
+            font-family: unset;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            height: 28px;
+            resize: none;
+            background: #0000;
+            border-radius: 3px;
+            box-shadow: none;
+            font-weight: 600;
+            margin: -4px 0;
+            max-height: 256px;
+            min-height: 20px;
+            padding: 4px 8px;
+            width: 100%;
+            border: none;
+            display: block;
+            outline: none;
+            line-height: 20px;
+
+            transition-duration: 85ms;
+            transition-property: background-color, border-color, box-shadow;
+            transition-timing-function: ease;
+
+            &.is-editing,
+            &:focus {
+               background-color: #fff;
+               box-shadow: inset 0 0 0 2px #0079bf;
+            }
+         }
+
+         .group-header-options {
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            z-index: 5;
+
+            button {
+               height: 32px;
+               width: 32px;
+               background-color: rgba(255, 255, 255, 0);
+               border: none;
+               display: flex;
+               align-items: center;
+               cursor: pointer;
+
+               &:hover {
+                  background-color: rgb(216, 216, 216);
+                  border-radius: 3px;
+               }
+            }
+         }
+      }
+
+      .group-tasks-section {
+         @include group-custom-scroll-bar;
+         flex: 1 1 auto;
+         margin: 0 4px;
+         min-height: 0;
+         overflow-x: hidden;
+         overflow-y: auto;
+         padding: 0 4px;
+         .list-card {
+            background-color: #fff;
+            border-radius: 3px;
+            box-shadow: 0 1px #091e4240;
+            cursor: pointer;
+            display: block;
+            margin-bottom: 8px;
+            max-width: 300px;
+            min-height: 20px;
+            position: relative;
+            text-decoration: none;
+            z-index:0;
+         }
+      }
+
+      .add-task-input-section {
+         background-color: #fff;
+         border-radius: 3px;
+         box-shadow: 0 1px 0 #091e4240;
+         cursor: pointer;
+         display: block;
+         margin-bottom: 8px;
+         max-width: 272px;
+         // margin: 0 12px;
+         min-height: 20px;
+         position: relative;
+         text-decoration: none;
+         z-index: 0;
+
+         // .group-task-link {
+         //    margin-left: 2px;
+         // }
+         .add-task-input-details {
+            padding: 6px 8px 2px;
+
+            .add-task-input {
+               overflow: hidden;
+               width: 100%;
+               overflow-wrap: break-word;
+               text-decoration: none;
+               font-family: unset;
+               resize: none;
+               // min-height: 54px;
+               background: none;
+               border: none;
+               box-shadow: none;
+               // height: auto;
+               margin-bottom: 4px;
+               // max-height: 162px;
+               min-height: 54px;
+               // overflow-y: auto;
+               padding: 0;
+               text-align: start;
+               display: flex;
+               align-items: flex-start;
+
+               &:focus {
+                  background: none;
+                  border: none;
+                  box-shadow: none;
+                  height: auto;
+                  outline: 0 none;
+                  cursor: text;
+               }
+            }
+         }
+      }
+
+      .add-task-control-section {
+         margin: 8px 0px;
+         .add-card-confirm-btn {
+            @include button-add-primary;
+         }
+         .cancel-add-card {
+            @include icon-lg;
+         }
+      }
+
+      // .task-composer-container {
+      .add-task-button {
+         // background-color: violet;
+         display: flex;
+         width: 272px;
+         justify-content: space-between;
+         max-height: 38px;
+         min-height: 38px;
+
+         .card-composer {
+            border-radius: 3px;
+            color: #5e6c84;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex: 1 0 auto;
+            margin: 2px 8px 6px;
+            padding: 4px 8px;
+            position: relative;
+            text-decoration: none;
+            overflow-x: hidden;
+            user-select: none;
+
+            &:hover {
+               background-color: #091e4214;
+               color: #172b4d;
+               outline: 0;
+            }
+
+            .add-task-plus-icon {
+               @include icon-sm;
+               width: 14px;
+               height: 14px;
+            }
+
+            .add-task-span {
+               cursor: pointer;
+            }
+         }
+      }
+      // }
+   }
+}

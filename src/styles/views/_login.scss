@@ -1,0 +1,19 @@
+.login-signup-page {
+   height: 100vh;
+   background-color: #f8f0f8;
+
+   .login-signup-header {
+      color: #293856;
+      margin: auto;
+      // font-size: 32px;
+      grid-gap: 10px;
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      h3 {
+         font-size: 40px;
+         margin: 0;
+         font-weight: 700;
+      }
+   }
+}

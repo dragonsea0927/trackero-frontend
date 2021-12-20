@@ -1,0 +1,40 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/functions';
+@import 'setup/variables';
+
+// BASICS
+@import 'basics/mixins';
+@import 'basics/layout';
+@import 'basics/variables';
+@import 'basics/base';
+@import 'basics/helpers';
+
+// COMPONENTS
+
+@import 'components/app-header';
+@import 'components/group-preview';
+@import 'components/task-preview';
+@import 'components/task-details';
+@import 'components/board-nav';
+@import 'components/board-nav-sidemenu';
+@import 'components/modal-list-actions';
+@import 'components/task-edit';
+@import 'components/user-mini-profile';
+@import 'components/members-list';
+@import 'components/labels-list';
+@import 'components/attachment-list';
+@import 'components/dates-list';
+@import 'components/checklist-preview';
+@import 'components/check-list';
+@import 'components/todo-preview';
+@import 'components/cover-menu';
+@import 'components/sidemenu-archived';
+@import 'components/sidemenu-boardbg';
+
+// VIEWS
+@import 'views/home';
+@import 'views/board-app';
+// @import 'views/signup';
+@import 'views/login';
+@import 'views/templates-list';

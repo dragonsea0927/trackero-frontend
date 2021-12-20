@@ -1,0 +1,417 @@
+.list-card {
+
+   &:hover {
+      .list-card-operation {
+         visibility: visible;
+      }
+   }
+   .list-card-cover {
+      // height: 0px;
+      height: 32px;
+      border-radius: 3px 3px 0 0;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      user-select: none;
+      &.img {
+         min-height: 150px;
+         max-height: 240px;
+         object-fit: cover;
+      }
+      &:hover {
+         .list-card-operation {
+            visibility: visible;
+         }
+      }
+
+      // .icon-edit {
+      //    float: right;
+      //    position: absolute;
+      //    height: 28px;
+      //    width: 28px;
+      //    // top: 2px;
+      //    // right: 2px;
+      //    // padding: 4px;
+      //    // z-index: 40;
+
+      //    &:hover {
+      //       background-color: #ebecf0;
+      //       opacity: 1;
+      //    }
+      // &:hover {
+      //    color: #172b4d;
+      //    text-decoration: none;
+      //    background-color: #ebecf0;
+      //    opacity: 1;
+      // }
+      // }
+   }
+   .list-card-operation {
+      background-clip: padding-box;
+      background-color: #f4f5f7;
+      background-origin: initial;
+      border-radius: 3px;
+      opacity: 0.8;
+      padding: 4px;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      visibility: hidden;
+      z-index: 40;
+      float: right;
+      height: 28px;
+      width: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+         background-color: #ebecf0;
+         opacity: 1;
+      }
+
+      &.icon-edit::before {
+         content: '\e928';
+      }
+   }
+
+   .list-card-edit-pencil {
+      float: right;
+      opacity: 0.8;
+      padding: 4px;
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      visibility: hidden;
+      z-index: 40;
+      height: 28px;
+      width: 28px;
+      &:hover {
+         background-color: #ebecf0;
+         opacity: 1;
+      }
+   }
+
+   .list-card-details {
+      overflow: hidden;
+      padding: 6px 8px 2px;
+      position: relative;
+      z-index: 10;
+
+      .list-card-title {
+         word-wrap: break-word;
+         clear: both;
+         color: #172b4d;
+         display: block;
+         margin: 0 0 4px;
+         overflow: hidden;
+         text-decoration: none;
+      }
+
+      .list-card-labels {
+         overflow: auto;
+         position: relative;
+         max-width: 205px;
+
+         input[type='checkbox'] {
+            display: none;
+         }
+      }
+   }
+}
+.badges {
+   float: left;
+   margin-left: -2px;
+   max-width: 100%;
+
+   .js-badges {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .badge {
+         color: #5e6c84;
+         display: inline-block;
+         margin: 0 4px 4px 0;
+         max-width: 100%;
+         min-height: 20px;
+         overflow: hidden;
+         padding: 2px;
+         position: relative;
+         text-decoration: none;
+         text-overflow: ellipsis;
+         vertical-align: top;
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+
+         &.is-due-soon {
+            background-color: #f2d600;
+            border-radius: 3px;
+            color: #fff;
+         }
+
+         .badge-text {
+            font-size: 12px;
+            padding: 0 4px 0 2px;
+            vertical-align: top;
+            white-space: nowrap;
+
+            &.js-due-date-text {
+               width: fit-content;
+            }
+         }
+      }
+   }
+
+   .badge-icon {
+      color: #6b778c;
+      vertical-align: top;
+      // font-size: 16px;
+      height: 16px;
+      line-height: 16px;
+      width: 16px;
+
+      &.icon-subscribe::before {
+         content: '\e969';
+      }
+
+      &.icon-clock::before {
+         color: white;
+         content: '\e91b';
+      }
+
+      &.icon-description::before {
+         color: #6b778c;
+         content: '\e922';
+      }
+
+      &.icon-comment::before {
+         content: '\e91e';
+         color: #6b778c;
+      }
+
+      &.icon-attachment::before {
+         content: '\e908';
+      }
+
+      &.icon-location::before {
+         content: '\e944';
+      }
+
+      &.icon-checklist::before {
+         content: '\e91a';
+      }
+      &.icon-archive::before {
+         content: '\e907';
+      }
+   }
+}
+
+.badge-icon {
+   color: #6b778c;
+   vertical-align: top;
+   // font-size: 16px;
+   height: 16px;
+   line-height: 16px;
+   width: 16px;
+}
+
+.list-card-members {
+   // display: inline-flex;
+   // justify-content: end;
+   float: right;
+   margin: 0 -6px 0 0;
+}
+
+.member {
+   float: right;
+   height: 28px;
+   // margin: 0 0 4px 4px;
+   margin: 0 4px 4px 0;
+   width: 28px;
+   background-color: #dfe1e6;
+   border-radius: 25em;
+   color: #172b4d;
+   cursor: pointer;
+   display: block;
+   overflow: visible;
+   position: relative;
+   text-decoration: none;
+   user-select: none;
+   z-index: 0;
+   &.task-detail-member {
+      float: left;
+      width: 32px;
+      height: 32px;
+      &:hover {
+         background-color: #c1c7d0;
+      }
+   }
+   .member-avatar {
+      height: 28px;
+      width: 28px;
+      border-radius: 25em;
+      object-fit: cover;
+   }
+}
+
+.list-card-labels {
+   input:checked + .label-toggler .card-label {
+      animation-name: closeLabels;
+      animation-fill-mode: forwards;
+      animation-duration: 0.45s;
+      animation-timing-function: ease-in;
+   }
+   input:not(:checked) + .label-toggler .card-label {
+      animation-name: openLabels;
+      animation-fill-mode: forwards;
+      animation-duration: 0.45s;
+      animation-timing-function: ease-out;
+   }
+}
+
+.label-toggler {
+   display: block;
+   overflow: hidden;
+   position: relative;
+   cursor: pointer;
+
+   &::before,
+   &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200px;
+      padding: 20px 0;
+      overflow: hidden;
+   }
+
+   .card-label {
+      box-sizing: unset;
+      border-radius: 4px;
+      color: white;
+      display: block;
+      overflow: hidden;
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-height: 8px;
+      height: 16px;
+      line-height: 16px;
+      max-width: 198px;
+      padding: 0 8px;
+      float: left;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 4px 4px 0;
+      min-width: 40px;
+      text-shadow: none;
+      width: auto;
+
+      .label-text {
+         display: initial;
+      }
+   }
+}
+
+.card-label {
+   border-radius: 4px;
+   color: #fff;
+   display: block;
+   margin-right: 4px;
+   max-width: 100%;
+   overflow: hidden;
+   padding: 4px 6px;
+   position: relative;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   &.task-detail-label {
+      cursor: pointer;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: block;
+      float: left;
+      font-weight: 600;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px 4px 0;
+      min-width: 40px;
+      padding: 0 12px;
+      width: auto;
+      color: #fff;
+      &:hover {
+         opacity: 0.8;
+      }
+   }
+}
+
+@keyframes openLabels {
+   0% {
+      min-width: 40px;
+      max-width: 50px;
+      height: 8px;
+      color: transparent;
+   }
+   10% {
+      min-width: 48px;
+      max-width: 55px;
+      padding: 0 8px;
+      height: 8px;
+   }
+   75% {
+      min-width: 56px;
+      max-width: 65px;
+      height: 8px;
+   }
+   99% {
+      min-width: 56px;
+      max-width: 75px;
+      height: 12px;
+      color: transparent;
+   }
+   100% {
+      box-sizing: border-box;
+      min-width: 56px;
+      max-width: 75px;
+      padding: 0 8px;
+      height: 16px;
+      line-height: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #fff;
+   }
+}
+
+@keyframes closeLabels {
+   0% {
+      height: 16px;
+      line-height: 16px;
+      min-width: 56px;
+      max-width: 55px;
+      padding: 0 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: transparent;
+   }
+   10% {
+      height: 8px;
+   }
+   50% {
+      min-width: 56px;
+      max-width: 70px;
+      padding: 0 8px;
+   }
+   75% {
+      width: 40px;
+      height: 8px;
+      color: transparent;
+   }
+   100% {
+      box-sizing: border-box;
+      width: 40px;
+      height: 8px;
+      color: transparent;
+   }
+}

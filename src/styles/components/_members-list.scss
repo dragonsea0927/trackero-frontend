@@ -1,0 +1,79 @@
+.members-list-modal{
+    .no-back{
+        .pop-over-header{
+            .pop-over-header-close-btn{
+             @include pop-over-close-btn;
+            }
+        }
+        .pop-over-content{
+            .pop-over-section{
+                margin-top: 12px;
+                .search-members{
+                    @include pop-over-search-input;
+                }
+                .board-members{
+                    margin-top: 12px;
+                    h4{
+                       @include pop-over-list-title;
+                    }
+                    .pop-over-member-list{
+                        .member-item{
+                            .name{
+                                box-sizing: unset;
+                                .member{
+                                    float: left;
+                                    width: 32px;
+                                    height: 32px;
+                                    margin-right: 8px;
+                                }
+                                .full-name{
+                                    .username{
+                                        
+                                    }
+                                }
+                                .checked-icon{
+                                    background-clip: content-box;
+                                    background-origin: content-box;
+                                    display: none;
+                                    padding: 11px;
+                                    position: absolute;
+                                    padding-right: 28px;
+                                    right: 0;
+                                    top: 0;
+                                    &::before{
+                                        content: "\e916";
+                                    }
+                                    &.icon-check{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                        a{
+                            border-radius: 3px;
+                            display: block;
+                            height: 32px;
+                            line-height: 32px;
+                            margin-bottom: 2px;
+                            overflow: hidden;
+                            padding: 4px;
+                            position: relative;
+                            text-decoration: none;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            &:hover{
+                                background-color: #091e420a;
+                            }
+                            &:active{
+                                background-color: #e4f0f6;
+                            }
+                        }
+                    }
+                    .empty-error{
+                        padding: 24px 6px;
+                    }
+                }
+            }
+        }
+    }
+}
