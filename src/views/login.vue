@@ -33,18 +33,19 @@
       </div>
       <div class="login-signup flex column">
          <h3>Log in to Trackero</h3>
-         <form action="#" class="login-form flex column">
+         <form @submit.prevent="doLogin" class="login-form flex column">
             <input
                name="username"
                type="username"
                placeholder="Enter user name"
-               value=""
+               autocomplete="off"
+               v-model="usernameInput"
             /><input
                name="password"
                type="password"
                placeholder="Enter password"
                autocomplete="off"
-               value=""
+               v-model="passwordInput"
             /><button
                type="submit"
                class="login-signup-btn nav-button"
@@ -53,32 +54,12 @@
                Log in
             </button>
          </form>
-         OR<br /><button
+         OR<br />
+         <button
             type="button"
             class="google-login-btn flex align-center justify-center"
-            style="
-               background-color: rgb(255, 255, 255);
-               display: inline-flex;
-               align-items: center;
-               color: rgba(0, 0, 0, 0.54);
-               box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px,
-                  rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
-               padding: 0px;
-               border-radius: 2px;
-               border: 1px solid transparent;
-               font-size: 14px;
-               font-weight: 500;
-               font-family: Roboto, sans-serif;
-            "
          >
-            <div
-               style="
-                  margin-right: 10px;
-                  background: rgb(255, 255, 255);
-                  padding: 10px;
-                  border-radius: 2px;
-               "
-            >
+            <div class="svg-wrapper">
                <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                   <g fill="#000" fill-rule="evenodd">
                      <path
@@ -101,19 +82,14 @@
                   </g>
                </svg>
             </div>
-            <span style="padding: 10px 10px 10px 0px; font-weight: 500"
-               >Continue with Google</span
-            ></button
-         ><a href="/signup">Sign up for an account</a>
+            <span class="txt-span">Continue with Google</span></button
+         ><a class="signup-link" href="/signup">Sign up for an account</a>
       </div>
       <div class="right-svg">
-         <img
-            src="/static/media/login-svg-right.df08073f.svg"
-            alt="right-svg"
-         />
+         <img :src="require(`@/assets/img/login-right.svg`)" />
       </div>
       <div class="left-svg">
-         <img src="/static/media/login-svg-left.ff7c7688.svg" alt="left-svg" />
+         <img :src="require(`@/assets/img/login-left.svg`)" />
       </div>
    </section>
 </template>
@@ -129,32 +105,30 @@ export default {
          user: null,
          reviews: [],
          userId: null,
+         usernameInput: '',
+         passwordInput: ''
       }
    },
    created() {
       this.loadUsers()
       this.userId = this.$store.getters.loggedinUserId || null
-
-      this.reviews = this.$store.getters.reviews || []
    },
    methods: {
       async doLogin() {
          try {
-            // const user = await userService.login(this.username, this.password);
             const user = await this.$store.dispatch({
                type: "login",
-               username: this.username,
-               password: this.password,
+               username: this.usernameInput,
+               password: this.passwordInput,
             })
+            console.log('this.usernameInput', this.usernameInput)
+            console.log('this.passwordInput', this.passwordInput)
             this.user = user
-            this.$store.commit({ type: "setLoggedinUser", user })
-            this.userId = this.$store.getters.loggedinUserId
-            // this.$store.dispatch({
-            //   type: "loadReviews",
-            //   userId: this.userId,
-            // });
-            this.reviews = this.$store.getters.reviews
-            this.$router.push("/toy")
+            console.log('this.user', this.user)
+            this.$store.commit({ type: "setLoggedUser", user })
+            this.userId = this.$store.getters.loggedUserId
+
+            this.$router.push("/board")
          } catch (err) {
             console.log(err)
          }

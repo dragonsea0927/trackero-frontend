@@ -2,6 +2,20 @@
    .hero-img {
       display: none;
    }
+   .login-signup {
+      margin-bottom: 175px;
+   }
+   .right-svg {
+      display: none;
+   }
+   .left-svg {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      text-align: center;
+   }
 }
 
 @media screen and (min-width: 560px) {
@@ -33,9 +47,28 @@
          }
       }
    }
+   .right-svg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   .left-svg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      img {
+         width: 100%;
+         object-fit: cover;
+      }
+   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
    .main-container {
       display: grid;
       grid-template-columns: 20px 1fr 20px;
@@ -167,6 +200,10 @@
             }
          }
       }
+   }
+
+   .login-signup {
+      grid-template-columns: minmax(20px, 1fr) minmax(auto, 720px) minmax(20px, 1fr);
    }
 }
 

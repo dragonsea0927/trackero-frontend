@@ -38,8 +38,8 @@
                Trackero
             </div>
             <div class="header-buttons">
-               <a href="/login" class="login-btn nav-button">Log in</a>
-               <a href="/signup" class="signup-btn nav-button">Sign-up</a>
+               <a href="#/login" class="login-btn nav-button">Log in</a>
+               <a href="#/signup" class="signup-btn nav-button">Sign-up</a>
             </div>
          </nav>
       </div>

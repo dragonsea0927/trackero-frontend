@@ -1,7 +1,8 @@
 .login-signup-page {
    height: 100vh;
    background-color: #f8f0f8;
-
+   display: grid;
+   grid-template-columns: 20px 1fr 20px;
    .login-signup-header {
       color: #293856;
       margin: auto;
@@ -14,6 +15,91 @@
          font-size: 40px;
          margin: 0;
          font-weight: 700;
+      }
+   }
+
+   .login-signup {
+      text-align: center;
+      max-width: 400px;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      grid-gap: 15px;
+      gap: 15px;
+      background-color: #fff;
+      border-radius: 3px;
+      padding: 25px 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      .login-form {
+         display: flex;
+         flex-direction: column;
+         input {
+            font-size: 1rem;
+            background-color: #fafbfc;
+            border-radius: 3px;
+            border: 2px solid #dfe1e6;
+            height: 44px;
+            padding: 7px;
+            transition: background-color 0.2s ease-in-out 0s, border-color 0.2s ease-in-out 0s;
+            margin-bottom: 17px;
+            outline: none;
+         }
+         button {
+            color: rgb(23, 43, 77);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 5px;
+            gap: 5px;
+            background-color: rgba(223, 224, 219, 0.235);
+            height: 32px;
+            padding: 6px 8px;
+            color: #fff;
+            border-radius: 3px;
+            transition: all 0.3s;
+            min-width: fit-content;
+            &:hover {
+               background-color: rgba(223, 224, 219, 0.37);
+            }
+         }
+      }
+
+      .google-login-btn {
+         background-color: rgb(255, 255, 255);
+         cursor: pointer;
+         border: none;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         color: rgba(0, 0, 0, 0.54);
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px 0px, rgba(0, 0, 0, 0.24) 0px 0px 1px 0px;
+         padding: 0px;
+         border-radius: 2px;
+         border: 1px solid transparent;
+         font-size: 14px;
+         font-weight: 500;
+         font-family: Roboto, sans-serif;
+         .svg-wrapper {
+            margin-right: 10px;
+            background: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 2px;
+         }
+
+         .txt-span {
+            padding: 10px 10px 10px 0px;
+            font-weight: 500;
+         }
+      }
+
+      .signup-link {
+         text-decoration: none;
+         color: inherit;
+         display: block;
       }
    }
 }
