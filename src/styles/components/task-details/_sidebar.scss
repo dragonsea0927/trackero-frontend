@@ -1,0 +1,86 @@
+.window-sidebar {
+	float: right;
+	overflow: hidden;
+	padding: 0 16px 8px 8px;
+	width: calc(100% - 600px);
+	z-index: 10;
+	position: relative;
+	@include for-mobile-layout {
+		clear: both;
+		float: none;
+		margin: 8px;
+		padding: 0;
+		width: auto;
+	}
+	.suggested-actions-module {
+		margin-bottom: 16px;
+		.suggested-actions-settings {
+			background-color: #091e420a;
+			border: none;
+			border-radius: 4px;
+			box-shadow: none;
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			top: 0;
+			user-select: none;
+			.settings-icon {
+				@include flex-row-center;
+				&::before {
+					content: '\e932';
+				}
+			}
+			&:hover {
+				background-color: #091e4214;
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+	h3 {
+		color: #5e6c84;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+		margin-bottom: -4px;
+	}
+	img {
+		width: 16px;
+		height: 16px;
+	}
+	hr {
+		margin: 8px 0;
+	}
+	.powerups-buttons {
+		h3 {
+			margin-top: 16px;
+		}
+	}
+	.automation-buttons {
+		.automation-title {
+			display: flex;
+			justify-content: space-between;
+			a {
+				@include flex-row-center;
+				margin-top: -2px;
+				padding: 2px;
+				height: 22px;
+			}
+		}
+	}
+}
+
+// HELPERS
+
+.card-delete-btn {
+	background-color: #b04632;
+	border: none;
+	box-shadow: none;
+	color: #fff;
+	&:hover {
+		border: none;
+		box-shadow: none;
+		color: #fff;
+		background-color: #933b27;
+	}
+}

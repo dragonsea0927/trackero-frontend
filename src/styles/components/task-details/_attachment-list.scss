@@ -1,0 +1,16 @@
+.task-detail-attachments {
+	.window-module-title {
+		border-bottom: none;
+		.icon-attachment {
+			left: -40px;
+			position: absolute;
+			top: 2px;
+		}
+	}
+	.attachments-area {
+		margin-left: 40px;
+		@include for-mobile-layout {
+			margin: 0;
+		}
+	}
+}

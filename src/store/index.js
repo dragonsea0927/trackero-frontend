@@ -9,21 +9,23 @@ import locale from 'element-ui/lib/locale/lang/en'
 import TextareaAutosize from 'vue-textarea-autosize'
 import VCalendar from 'v-calendar'
 import moment from 'moment'
-
 import VueDragscroll from 'vue-dragscroll'
+import GSignInButton from 'vue-google-signin-button'
+
+Vue.use(GSignInButton)
 Vue.use(VueDragscroll)
 Vue.prototype.moment = moment
 Vue.use(TextareaAutosize)
 Vue.use(Vuex)
 Vue.use(ElementUI, { locale })
 Vue.use(VCalendar, {
-   componentPrefix: 'vc'
+	componentPrefix: 'vc'
 })
 
 export default new Vuex.Store({
-   modules: {
-      boardStore,
-      userStore,
-      photoStore
-   }
+	modules: {
+		boardStore,
+		userStore,
+		photoStore
+	}
 })

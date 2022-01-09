@@ -1,0 +1,9 @@
+.task-detail-members-list {
+    .task-detail-add-button {
+        border-radius: 100%;
+        .add-btn-icon {
+            @include flex-row-center;
+            padding: 8px;
+        }
+    }
+}

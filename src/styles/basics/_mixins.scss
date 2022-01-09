@@ -173,3 +173,9 @@
    line-height: 16px;
    margin-top: 16px;
 }
+
+@mixin for-mobile-layout {
+   @media (max-width: 750px){
+     @content;
+   }
+ }

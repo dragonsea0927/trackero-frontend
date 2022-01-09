@@ -1,0 +1,61 @@
+.task-detail-activity {
+    .window-module-title {
+        align-items: center;
+        display: flex;
+        min-height: 32px;
+        justify-content: space-between;
+        .icon-activity {
+            left: -40px;
+            position: absolute;
+            text-align: center;
+            top: 8px;
+        }
+        h3 {
+            display: inline-block;
+            margin: 0;
+            min-height: 18px;
+            min-width: 40px;
+            width: auto;
+        }
+        .window-module-title-options {
+            float: right;
+            margin-right: 2px;
+            .show-details-btn,
+            .hide-details-btn {
+                margin: 0 0 0 8px;
+                border: none;
+                border-radius: 3px;
+                box-sizing: border-box;
+                display: inline-block;
+                line-height: 20px;
+                padding: 6px 12px;
+                position: relative;
+                background-color: #091e420a;
+                text-align: center;
+                &:hover {
+                    background-color: #091e4214;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .activity-container {
+        .activity {
+            margin-left: 40px;
+            min-height: 32px;
+            padding: 8px 0;
+            position: relative;
+            .activity-creator {
+                height: 32px;
+                left: -40px;
+                position: absolute;
+                top: 8px;
+                width: 32px;
+            }
+        }
+        .activity-desc {
+            word-wrap: break-word;
+            margin: 0;
+        }
+    }
+}

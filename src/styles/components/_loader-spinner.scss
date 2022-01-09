@@ -1,0 +1,7 @@
+.loader-spinner{
+	@include flex-row-center
+	img{
+		width: 150px;
+		height: 150px;
+	}
+}

@@ -5,30 +5,29 @@
    overflow-y: scroll;
    background: #eae6ff;
    background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(#eae6ff));
-   background: linear-gradient(0deg, #fff, #eae6ff 100%);
+   background: linear-gradient(0deg, #fff, #eae6ff 80%);
    &.scrolled {
       .home-header {
          background-color: #fff;
          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
    }
-   // overflow-x: hidden;
-
    .home-header {
       position: fixed;
-      // top: 0;
-      // right: 0;
       left: 0;
       z-index: 100;
       width: 100%;
       transition: background-color 0.7s ease 0s;
-
       .nav-header {
          display: flex;
+         font-size: 20px;
          align-items: center;
          justify-content: space-between;
-         padding: 20px;
+         padding: 16px;
+         padding-top: 1rem;
+         padding-bottom: 1rem;
          flex-wrap: wrap;
+         
 
          .logo {
             display: flex;

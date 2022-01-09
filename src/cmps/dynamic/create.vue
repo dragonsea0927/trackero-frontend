@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import openColors from './sidemenu-colors'
+import openColors from '@/cmps/dynamic/board-side-menu/sidemenu-colors'
 
 export default {
    props: {

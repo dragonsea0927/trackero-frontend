@@ -1,0 +1,78 @@
+.task-cover {
+	background-color: #091e4214;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	min-height: 116px;
+	position: relative;
+	transition: opacity 85ms;
+	width: 100%;
+	&.img {
+		background-size: contain;
+		background-origin: content-box;
+		box-sizing: border-box;
+		background-position: center center;
+		height: 160px;
+		min-height: 160px;
+		padding: 0px;
+	}
+	.task-cover-menu {
+		align-items: center;
+		bottom: 0;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: flex-end;
+		padding: 8px;
+		position: absolute;
+		width: 100%;
+		.task-cover-menu-button {
+			all: unset;
+			background-color: #00000014;
+			border-radius: 3px;
+			color: #172b4d;
+			padding: 6px 12px 6px 6px;
+			text-decoration: none;
+			@include flex-row-center;
+			.cover-menu-btn-icon {
+				@include flex-row-center;
+				opacity: 0.6;
+				margin-right: 6px;
+				&::before {
+					content: '\e914';
+				}
+			}
+			&:hover {
+				cursor: pointer;
+				background-color: #00000029;
+				color: #091e42;
+				outline: 0;
+			}
+		}
+	}
+}
+
+
+// HELPERS
+
+.card-is-archived {
+	background-color: #fdfae5;
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(0, 0, 0, 0.05) 25%,
+		transparent 0,
+		transparent 50%,
+		rgba(0, 0, 0, 0.05) 0,
+		rgba(0, 0, 0, 0.05) 75%,
+		transparent 0,
+		transparent
+	);
+	background-size: 14px 14px;
+	min-height: 30px;
+	padding: 12px;
+	position: relative;
+	.sidebar-action-text {
+		font-size: 16px;
+		line-height: 30px;
+		margin: 0;
+	}
+}

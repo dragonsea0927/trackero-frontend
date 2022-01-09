@@ -1,0 +1,64 @@
+.attachment-list {
+    .attachment-thumbnail {
+        border-radius: 3px;
+        margin: 0 0 8px;
+        min-height: 80px;
+        overflow: hidden;
+        position: relative;
+        .attachment-thumbnail-preview {
+            background-color: #091e420a;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            border-radius: 3px;
+            height: 80px;
+            left: 0;
+            margin-top: -40px;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            top: 50%;
+            width: 112px;
+            z-index: 1;
+        }
+    }
+    .attachment-thumbnail-details {
+        box-sizing: border-box;
+        cursor: pointer;
+        margin: 0;
+        min-height: 80px;
+        padding: 8px 8px 8px 128px;
+        z-index: 0;
+        &:hover {
+            background-color: #091e420a;
+        }
+        .attachment-thumbnail-name {
+            word-wrap: break-word;
+            font-weight: 700;
+        }
+        .attachment-thumbnail-details-title-options {
+            display: block;
+            margin-bottom: 8px;
+            span:not(:first-child):before {
+                content: ' - ';
+            }
+            .attachment-thumbnail-details-title-options-item {
+                font-size: 14px;
+                .attachment-thumbnail-details-options-item-text {
+                    text-decoration: underline;
+                    color: #5e6c84;
+                }
+            }
+        }
+        .attachment-thumbnail-details-options {
+            .icon-card-cover {
+                &::before {
+                    content: '\e914';
+                }
+            }
+            .attachment-thumbnail-details-options-item-text {
+                text-decoration: underline;
+            }
+        }
+    }
+}

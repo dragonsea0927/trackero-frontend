@@ -73,7 +73,7 @@ export default {
       },
       removeTaskMember(user) {
          this.$emit('removeTaskMember', user)
-         this.$emit('closeMiniProfile')
+         this.closeMiniProfile()
       },
    }
 }

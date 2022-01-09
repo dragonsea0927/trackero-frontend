@@ -3,7 +3,6 @@ import { boardService } from '@/services/board-service.js'
 export const boardStore = {
    state: {
       boards: [],
-      currBoardId: null,
       currBoard: null,
       groups: [],
       currGroup: null,
@@ -15,9 +14,6 @@ export const boardStore = {
       //----------------------------------------------------------- */
       boardsForDisplay(state) {
          return state.boards
-      },
-      currBoardId(state) {
-         return state.currBoardId
       },
       currBoard(state) {
          return state.currBoard
@@ -110,10 +106,6 @@ export const boardStore = {
          const currGroup = state.groups.find(currGroup => currGroup.id === groupId)
          const taskIdx = currGroup.tasks.findIndex(currTask => currTask.id === updatedTask.id)
          currGroup.tasks.splice(taskIdx, 1, updatedTask)
-      },
-      updateTaskPositions(state, { updatedGroup }) {
-         const idx = state.groups.findIndex(group => group.id === updatedGroup.id)
-         state.currBoard.groups.splice(idx, 1, updatedGroup)
       },
       //----------------------------------------------------------- */
       //***********************MEMBERS********************************
@@ -249,14 +241,6 @@ export const boardStore = {
       //----------------------------------------------------------- */
       //***********************TASKS********************************
       //----------------------------------------------------------- */
-      async updateTaskPositions({ state, commit }, { tasks, group }) {
-         try {
-            const updatedGroup = await boardService.updateTasks(tasks, group, state.currBoard)
-            commit({ type: 'updateTaskPositions', updatedGroup })
-         } catch (err) {
-            console.log(err)
-         }
-      },
       async addTask({ state, commit }, { groupId, title }) {
          try {
             const newTask = await boardService.getEmptyTask(title)
@@ -283,26 +267,14 @@ export const boardStore = {
             console.log(err)
          }
       },
-      async getEmptyTodo({ state, commit }) {
-         try {
-            return boardService.getEmptyTodo()
-         } catch (err) {
-            console.log(err)
-         }
+      getEmptyTodo({ state, commit }) {
+         return boardService.getEmptyTodo()
       },
-      async getEmptyComment({ state, commit }) {
-         try {
-            return boardService.getEmptyComment()
-         } catch (err) {
-            console.log(err)
-         }
+      getEmptyComment({ state, commit }) {
+         return boardService.getEmptyComment()
       },
-      async getEmptyChecklist({ state, commit }) {
-         try {
-            return boardService.getEmptyChecklist()
-         } catch (err) {
-            console.log(err)
-         }
+      getEmptyChecklist({ state, commit }) {
+         return boardService.getEmptyChecklist()
       },
       //----------------------------------------------------------- */
       //***********************MEMBERS********************************

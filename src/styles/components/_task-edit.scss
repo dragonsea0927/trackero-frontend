@@ -34,6 +34,7 @@
       position: absolute;
 
       .list-card-quick-edit {
+         width: 256px;
          z-index: 1;
       }
 
@@ -159,6 +160,7 @@
          opacity: 0;
          position: absolute;
          top: 0;
+         bottom: 0;
          transform: translateX(-20px);
          transition: opacity 85ms ease-in, transform 85ms ease-in;
          width: 240px;

@@ -1,5 +1,4 @@
 import io from 'socket.io-client'
-import { httpService } from './http-service'
 
 const baseUrl = process.env.NODE_ENV === 'production' ? '' : '//localhost:3000'
 

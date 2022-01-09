@@ -128,18 +128,13 @@
                      </p>
                   </div>
                </div>
-               <div class="row py-5">
+               <!-- <div class="row py-5">
                   <div class="col-md-5 order-md-2 mb-3 mb-md-0">
                      <img
                         :src="`https://image.freepik.com/free-vector/task-management-abstract-concept-illustration_335657-2127.jpg`"
                      />
                   </div>
                   <div class="col-md-7">
-                     <!-- <h5>Dive into the details</h5> -->
-                     <!-- <date-picker
-                        :range1="range"
-                        @click.native="dayClicked"
-                     ></date-picker> -->
                      <h2 class="text-sm-header">
                         Cards contain everything you need
                      </h2>
@@ -151,7 +146,7 @@
                         attachments, conversations, and more.
                      </p>
                   </div>
-               </div>
+               </div> -->
             </div>
          </div>
       </div>
@@ -170,7 +165,6 @@ export default {
    },
    async created() {
       await this.$store.dispatch({ type: 'loadBoards' })
-      // await this.$store.dispatch({ type: 'loadUsers' })
    },
    methods: {
       scrollListener(ev) {

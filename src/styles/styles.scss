@@ -8,14 +8,13 @@
 @import 'basics/layout';
 @import 'basics/variables';
 @import 'basics/base';
+@import 'basics/icons';
 @import 'basics/helpers';
 
 // COMPONENTS
-
 @import 'components/app-header';
 @import 'components/group-preview';
 @import 'components/task-preview';
-@import 'components/task-details';
 @import 'components/board-nav';
 @import 'components/board-nav-sidemenu';
 @import 'components/modal-list-actions';
@@ -31,10 +30,29 @@
 @import 'components/cover-menu';
 @import 'components/sidemenu-archived';
 @import 'components/sidemenu-boardbg';
+@import 'components/loader-spinner';
+
+// CMPS TASK DETAILS
+@import 'components/task-details/activity';
+@import 'components/task-details/attachment-list';
+@import 'components/task-details/attachment-preview';
+@import 'components/task-details/comment';
+@import 'components/task-details/cover';
+@import 'components/task-details/description';
+@import 'components/task-details/label-list';
+@import 'components/task-details/member-list';
+@import 'components/task-details/sidebar';
+@import 'components/task-details/title';
+@import 'components/task-details/summary';
+@import 'components/task-details/date-list';
+
 
 // VIEWS
 @import 'views/home';
 @import 'views/board-app';
+@import 'views/task-details';
+
 // @import 'views/signup';
 @import 'views/login';
+@import 'views/signup';
 @import 'views/templates-list';

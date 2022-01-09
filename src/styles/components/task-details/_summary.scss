@@ -1,0 +1,57 @@
+.task-detail-data {
+	margin-top: 8px;
+	margin-left: 40px;
+	@include for-mobile-layout {
+		margin: 0;
+	}
+	.task-detail-list-badge {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		margin: 0 8px 8px 0;
+	}
+
+	.start-date-badge {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		margin: 0 8px 8px 0;
+		.content-container {
+			.start-date-btn {
+				margin-bottom: 0;
+				color: #172b4d;
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 400;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 3px;
+				cursor: pointer;
+				padding: 6px 12px;
+				text-decoration: none;
+				background-color: rgba(9, 30, 66, 0.04);
+				box-shadow: none;
+				border: none;
+				transition-property: background-color, border-color, box-shadow;
+				transition-duration: 85ms;
+				transition-timing-function: ease;
+				&:hover {
+					background-color: rgba(9, 30, 66, 0.08);
+					box-shadow: none;
+					border: none;
+				}
+			}
+		}
+	}
+	.task-detail-dates-badge,.task-detail-due-date-badge {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		margin: 0 8px 8px 0;
+	}
+	.task-detail-last-updated {
+		cursor: auto;
+		min-width: 120px;
+	}
+}
