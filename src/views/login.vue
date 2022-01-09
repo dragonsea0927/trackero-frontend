@@ -98,7 +98,7 @@
          </g-signin-button>
          <a @click="doLogout">Sign out</a>
 
-         <a class="signup-link" href="/signup">Sign up for an account</a>
+         <a class="signup-link" href="#/signup">Sign up for an account</a>
       </div>
       <div class="right-svg">
          <img :src="require(`@/assets/img/login-right.svg`)" />
